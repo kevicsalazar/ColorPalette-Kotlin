@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ColorPalette</string>
+    <string name="palette_view">Palette View</string>
+</resources>
