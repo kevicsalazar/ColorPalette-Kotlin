@@ -1,6 +1,7 @@
 package com.kevicsalazar.colorpalette
 
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,10 +22,17 @@ class ColorAdapter : RecyclerView.Adapter<ColorAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder.itemView) {
+
             val color = colors[position]
+            val colorHex = String.format("#%06X", 0xFFFFFF and color.second)
+
+            tvColorHex.text = colorHex
             tvColorNum.text = color.first
-            tvColorHex.text = String.format("#%06X", 0xFFFFFF and color.second)
             setBackgroundColor(color.second)
+            setOnClickListener {
+                Log.e("Palette ${color.first}", colorHex)
+            }
+
         }
     }
 

@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                     .with(this)
                     .setTitle("Choose color")
                     .initialColor((ivColorPreview.background as ColorDrawable).color)
-                    .wheelType(ColorPickerView.WHEEL_TYPE.FLOWER)
+                    .wheelType(ColorPickerView.WHEEL_TYPE.CIRCLE)
                     .density(12)
                     .lightnessSliderOnly()
                     .setPositiveButton("ok") { dialog, selectedColor, allColors ->
